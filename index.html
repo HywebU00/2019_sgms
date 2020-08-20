@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>社會團體成立登記線上申辦系統</title>
+	<style type="text/css">
+		html, body{font-family: "微軟正黑體", Arial, Helvetica, sans-serif;}
+		.wrap{ width: 720px; margin: 0 auto;}
+		table{ padding:0; border-collapse:collapse; font-size:16px; width: 100%; margin:20px auto;}
+		table th{ background:#27c4ca; color: #fff; padding: 1em; text-align:left;}
+		table td{ border:1px solid #ccc ; padding: .5em 1em;}
+		table td:nth-child(1){ width: 70%; }
+		table td:nth-child(2){ width: 30%; }
+		h2{ margin-top: 1.5em; }
+		h3{ color: red; }
+		.Now{ color:deeppink; }
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<h1>社會團體成立登記線上申辦系統</h1>
+		<h2>01/前臺功能(申請人或代辦業者)</h2>	
+		<table border="0">
+			<!-- /////////////////// 首頁 MP /////////////////// -->
+			<tr>
+				<th>申辦業務選擇</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>申辦業務選擇</td>
+				<td><a href="mp.html" target="_blank">mp.html</a></td>
+			</tr>
+			<tr>
+				<td>自然人憑證登入</td>
+				<td><a href="login-01.html" target="_blank">login-01.html</a></td>
+			</tr>
+			<tr>
+				<td>個人帳密方式登入</td>
+				<td><a href="login-02.html" target="_blank">login-02.html</a></td>
+			</tr>
+			<tr>
+				<td>社團組織憑證登入</td>
+				<td><a href="login-03.html" target="_blank">login-03.html</a></td>
+			</tr>
+			<tr>
+				<td>社團帳密方式登入</td>
+				<td><a href="login-04.html" target="_blank">login-04.html</a></td>
+			</tr>
+			<!-- ///////////////////  /////////////////// -->
+			<tr>
+				<th>社團成立登記暫存資料列表</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>社團成立登記暫存資料列表</td>
+				<td><a href="QP.html" target="_blank">QP.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體分類歸屬</td>
+				<td><a href="QP1.html" target="_blank">QP1.html</a></td>
+			</tr>
+			<tr>
+				<td>送件人資料</td>
+				<td><a href="QP2.html" target="_blank">QP2.html</a></td>
+			</tr>
+			<tr>
+				<td>編輯社會團體基本資料</td>
+				<td><a href="QP3.html" target="_blank">QP3.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體章程(2-1)、(2-2)</td>
+				<td><a href="QP4.html" target="_blank">QP4.html</a></td>
+			</tr>
+			<tr>
+				<td>負責人、理事及監事名冊</td>
+				<td><a href="QP6.html" target="_blank">QP6.html</a></td>
+			</tr>
+			<tr>
+				<td>負責人、理事及監事名冊(資格提醒文字)</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>會員名冊</td>
+				<td><a href="QP7.html" target="_blank">QP7.html</a></td>
+			</tr>
+			<tr>
+				<td>會員名冊匯入</td>
+				<td><a href="QP8.html" target="_blank">QP8.html</a></td>
+			</tr>
+			<tr>
+				<td>其他應檢附文件</td>
+				<td><a href="QP5.html" target="_blank">QP5.html</a></td>
+			</tr>
+			<tr>
+				<td>確認登記資料並送出</td>
+				<td><a href="QP9.html" target="_blank">QP9.html</a></td>
+			</tr>
+			<tr>
+				<td>送出成功訊息頁</td>
+				<td><a href="QP10.html" target="_blank">QP10.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>社會團體名稱預約功能</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>社會團體名稱查詢輸入頁</td>
+				<td><a href="QP11.html" target="_blank">QP11.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體名稱查詢結果頁(查有，不可預約)</td>
+				<td><a href="QP12.html" target="_blank">QP12.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體名稱查詢結果頁(查無可預約)</td>
+				<td><a href="QP13.html" target="_blank">QP13.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體預約申請書頁</td>
+				<td><a href="QP14.html" target="_blank">QP14.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體預約申請書送出確認頁</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>社會團體預約完成頁</td>
+				<td><a href="QP15.html" target="_blank">QP15.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台(申請人)社團成立登記申請案件進度查詢</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>前台申請人(社團成立登記申請)案件進度查詢頁</td>
+				<td><a href="QP16.html" target="_blank">QP16.html</a></td>
+			</tr>
+			<tr>
+				<td>前台申請人(社團成立登記申請)案件進度查詢結果頁</td>
+				<td><a href="QP17.html" target="_blank">QP17.html</a></td>
+			</tr>
+			<tr>
+				<td>前台申請人(社團成立登記申請)案件進度查詢結果檢視頁</td>
+				<td><a href="QP18.html" target="_blank">QP18.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台(申請人)社團成立登記申請案件退補功能</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>前台申請人(社團成立登記申請)退補件列表頁</td>
+				<td><a href="QP19.html" target="_blank">QP19.html</a></td>
+			</tr>
+			<tr>
+				<td>前台申請人(社團成立登記申請)案件進度查詢結果檢視頁2-1</td>
+				<td><a href="QP20.html" target="_blank">QP20.html</a></td>
+			</tr>
+			<tr>
+				<td>前台申請人(社團成立登記申請)案件進度查詢結果檢視頁2-2</td>
+				<td><a href="QP21.html" target="_blank">QP21.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台(申請人)社團成立登記申請案件撤銷</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>前台申請人(社團成立登記申請)撤銷案件查詢頁</td>
+				<td><a href="QP22.html" target="_blank">QP22.html</a></td>
+			</tr>
+			<tr>
+				<td>前台申請人(社團成立登記申請)撤銷案件查詢結果頁</td>
+				<td><a href="QP23.html" target="_blank">QP23.html</a></td>
+			</tr>
+			<tr>
+				<td>前台申請人(社團成立登記申請)撤銷案件再次確認訊息頁</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>前台申請人(社團成立登記申請)撤銷案件檢視頁</td>
+				<td><a href="QP18.html" target="_blank">同QP18.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台帳號維護_修改密碼</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>修改密碼輸入頁</td>
+				<td><a href="QP24.html" target="_blank">QP24.html</a></td>
+			</tr>
+			<tr>
+				<td>修改密碼送出確認頁</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台帳號維護_基本資料維護</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>基本資料維護頁</td>
+				<td><a href="QP25.html" target="_blank">QP25.html</a></td>
+			</tr>
+			<tr>
+				<td>基本資料維護儲存成功訊息</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+		</table>
+
+
+		<h3>20181008新增頁面</h3>	
+		<table border="0">
+			<tr>
+				<th>前台(在臺辦事處)社會團體登記資料填寫各步驟頁面</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>(在臺辦事處)社團成立登記暫存資料列表</td>
+				<td>同 QP</td>
+			</tr>
+			<tr>
+				<td>社會團體分類歸屬(全國或地方)</td>
+				<td><a href="QP70.html" target="_blank">QP70.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體分類歸屬(在台辦事處)</td>
+				<td><a href="QP71.html" target="_blank">QP71.html</a></td>
+			</tr>
+			<tr>
+				<td>送件人資料</td>
+				<td>同 QP2</td>
+			</tr>
+			<tr>
+				<td>編輯社會團體基本資料</td>
+				<td><a href="QP72.html" target="_blank">QP72.html</a></td>
+			</tr>
+			<tr>
+				<td>負責人及工作人員簡歷表</td>
+				<td><a href="QP73.html" target="_blank">QP73.html</a></td>
+			</tr>
+			<tr>
+				<td>負責人及工作人員簡歷表匯入</td>
+				<td><a href="QP74.html" target="_blank">QP74.html</a></td>
+			</tr>
+			<tr>
+				<td>其他應檢附文件</td>
+				<td><a href="QP75.html" target="_blank">QP75.html</a></td>
+			</tr>
+			<tr>
+				<td>確認登記資料並送出</td>
+				<td><a href="QP76.html" target="_blank">QP76.html</a></td>
+			</tr>
+			<tr>
+				<td>送出成功訊息頁</td>
+				<td>同 QP10</td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台社會團體登記資料填寫各步驟頁面</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>社會團體分類歸屬(全國或地方)</td>
+				<td>同 QP70</td>
+			</tr>
+			<tr>
+				<td>社會團體分類歸屬(在台辦事處)</td>
+				<td>同 QP71</td>
+			</tr>
+			<tr>
+				<td>確認登記資料並送出</td>
+				<td>同 QP9</td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台優先處理事項頁面</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>(申請人或代辦業者)優先處理事項(社團登記申請)</td>
+				<td><a href="QP77.html" target="_blank">QP77.html</a></td>
+			</tr>
+			<tr>
+				<td>(申請人或代辦業者)優先處理事項(社團名稱預約)</td>
+				<td><a href="QP78.html" target="_blank">QP78.html</a></td>
+			</tr>
+			<tr>
+				<td>(申請人或代辦業者)優先處理事項(社團名稱預約撤銷)</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>(申請人或代辦業者)優先處理事項(社團名稱預約撤銷成功訊息)</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+		</table>
+
+
+		<h2>02/前臺功能(社團會務管理者)</h2>
+		<table border="0">
+			<tr>
+				<th>前台社會團體合併或分立申請</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>社會團體合併或分立申報功能</td>
+				<td><a href="QP26.html" target="_blank">QP26.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體合併或分立申報</td>
+				<td><a href="QP27.html" target="_blank">QP27.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體合併或分立申報送出確認頁</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>社會團體合併或分立申報送出完成頁</td>
+				<td><a href="QP28.html" target="_blank">QP28.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體合併或分立申報資料列表(待審)</td>
+				<td><a href="QP29.html" target="_blank">QP29.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體合併或分立申報資料列表(已完成審查)</td>
+				<td><a href="QP30.html" target="_blank">QP30.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體合併或分立申報資料檢視</td>
+				<td><a href="QP31.html" target="_blank">QP31.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台社會團體法人登記備查</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>社會團體法人登記備查功能</td>
+				<td>同 QP26</td>
+			</tr>
+			<tr>
+				<td>社會團體法人登記備查申請</td>
+				<td><a href="QP32.html" target="_blank">QP32.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體法人登記備查申請送出確認頁</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>社會團體法人登記備查申請送出完成頁</td>
+				<td>同 QP10</td>
+			</tr>
+			<tr>
+				<td>社會團體法人登記備查申請資料列表(待審)</td>
+				<td>同 QP29</td>
+			</tr>
+			<tr>
+				<td>社會團體法人登記備查申請資料列表(已完成審查)</td>
+				<td>同 QP30</td>
+			</tr>
+			<tr>
+				<td>社會團體法人登記備查申請資料檢視</td>
+				<td><a href="QP33.html" target="_blank">QP33.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台社會團體解散登記</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>社會團體解散登記申請功能</td>
+				<td>同 QP26</td>
+			</tr>
+			<tr>
+				<td>社會團體解散登記申請</td>
+				<td><a href="QP34.html" target="_blank">QP34.html</a></td>
+			</tr>
+			<tr>
+				<td>社會團體解散登記申請送出確認頁</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>社會團體解散登記申請送出完成頁</td>
+				<td>同 QP10</td>
+			</tr>
+			<tr>
+				<td>社會團體解散登記申請資料列表(待審)</td>
+				<td>同 QP29</td>
+			</tr>
+			<tr>
+				<td>社會團體解散登記申請資料列表(已完成審查)</td>
+				<td>同 QP30</td>
+			</tr>
+			<tr>
+				<td>社會團體解散登記申請資料檢視</td>
+				<td><a href="QP35.html" target="_blank">QP35.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台社會團體圖記印模上傳</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>已核備圖記印模列表</td>
+				<td><a href="QP36.html" target="_blank">QP36.html</a></td>
+			</tr>
+			<tr>
+				<td>圖記印模維護歷程列表</td>
+				<td><a href="QP37.html" target="_blank">QP37.html</a></td>
+			</tr>
+			<tr>
+				<td>撤銷新增圖記印模備查</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>新增圖記印模</td>
+				<td><a href="QP38.html" target="_blank">QP38.html</a></td>
+			</tr>
+			<tr>
+				<td>檢視送報之圖記印模</td>
+				<td><a href="QP39.html" target="_blank">QP39.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台會務管理_年度接受補助之名單清冊</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>已核備年度接受補助之名單清冊列表</td>
+				<td><a href="QP40.html" target="_blank">QP40.html</a></td>
+			</tr>
+			<tr>
+				<td>年度接受補助之名單清冊維護歷程列表</td>
+				<td>同 QP37</td>
+			</tr>
+			<tr>
+				<td>撤銷新增年度接受補助之名單清冊備查</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>新增年度接受補助之名單清冊</td>
+				<td><a href="QP41.html" target="_blank">QP41.html</a></td>
+			</tr>
+			<tr>
+				<td>檢視年度接受補助之名單清冊</td>
+				<td><a href="QP42.html" target="_blank">QP42.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台會務管理_社團基本資料維護</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>已核備社會團體基本資料列表</td>
+				<td><a href="QP43.html" target="_blank">QP43.html</a></td>
+			</tr>
+			<tr>
+				<td>檢視已核備社會團體基本資料</td>
+				<td><a href="QP44.html" target="_blank">QP44.html</a></td>
+			</tr>
+			<tr>
+				<td>更新最新一筆社會團體基本資料</td>
+				<td><a href="QP45.html" target="_blank">QP45.html</a></td>
+			</tr>
+			<tr>
+				<td>備查中社會團體基本資料列表</td>
+				<td>同 QP37</td>
+			</tr>
+			<tr>
+				<td>備查變更社會團體基本資料申請表</td>
+				<td><a href="QP46.html" target="_blank">QP46.html</a></td>
+			</tr>
+			<tr>
+				<td>備查變更社會團體基本資料申請表送出提醒頁</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>完成送出頁</td>
+				<td>同 QP10</td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台會務管理_財務書表(年度預算、工作計畫)</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>已核備財務書表列表</td>
+				<td><a href="QP47.html" target="_blank">QP47.html</a></td>
+			</tr>
+			<tr>
+				<td>財務書表維護歷程列表</td>
+				<td>同 QP37</td>
+			</tr>
+			<tr>
+				<td>撤銷新增財務書表備查</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>新增財務書表</td>
+				<td><a href="QP48.html" target="_blank">QP48.html</a></td>
+			</tr>
+			<tr>
+				<td>檢視財務書表</td>
+				<td><a href="QP49.html" target="_blank">QP49.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台會務管理_財務書表(決算、工作報告、資產負債表、財產目錄)</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>已核備財務書表列表</td>
+				<td>同 QP47</td>
+			</tr>
+			<tr>
+				<td>財務書表維護歷程列表</td>
+				<td>同 QP37</td>
+			</tr>
+			<tr>
+				<td>撤銷新增財務書表備查</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>新增財務書表</td>
+				<td>同 QP48</td>
+			</tr>
+			<tr>
+				<td>檢視財務書表</td>
+				<td>同 QP49</td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台會務管理_章程</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>已核備社會團體章程列表</td>
+				<td><a href="QP50.html" target="_blank">QP50.html</a></td>
+			</tr>
+			<tr>
+				<td>檢視已核備社會團體章程</td>
+				<td><a href="QP51.html" target="_blank">QP51.html</a></td>
+			</tr>
+			<tr>
+				<td>備查中社會團體章程列表</td>
+				<td>同 QP37</td>
+			</tr>
+			<tr>
+				<td>備查變更社會團體章程申請表</td>
+				<td><a href="QP52.html" target="_blank">QP52.html</a></td>
+			</tr>
+			<tr>
+				<td>備查變更社會團體章程申請表送出提醒頁</td>
+				<td>請工程師設定 alert</td>
+			</tr>
+			<tr>
+				<td>完成送出頁</td>
+				<td>同 QP10</td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台會務管理_會員名冊</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>個人會員屆次頁</td>
+				<td><a href="QP53.html" target="_blank">QP53.html</a></td>
+			</tr>
+			<tr>
+				<td>個人會員屆次查詢結果頁</td>
+				<td><a href="QP54.html" target="_blank">QP54.html</a></td>
+			</tr>
+			<tr>
+				<td>該屆次個人會員列表頁</td>
+				<td><a href="QP55.html" target="_blank">QP55.html</a></td>
+			</tr>
+			<tr>
+				<td>檢視個人會員資料</td>
+				<td><a href="QP56.html" target="_blank">QP56.html</a></td>
+			</tr>
+			<tr>
+				<td>更新個人會員資料</td>
+				<td><a href="QP57.html" target="_blank">QP57.html</a></td>
+			</tr>
+			<tr>
+				<td>新增個人會員資料</td>
+				<td><a href="QP58.html" target="_blank">QP58.html</a></td>
+			</tr>
+			<tr>
+				<td>刪除個人會員</td>
+				<td>同 QP55 加alert</td>
+			</tr>
+			<tr>
+				<td>匯入個人會員Excel資料</td>
+				<td><a href="QP59.html" target="_blank">QP59.html</a></td>
+			</tr>
+			<tr>
+				<td>匯入個人會員Excel資料預覽頁</td>
+				<td><a href="QP60.html" target="_blank">QP60.html</a></td>
+			</tr>
+			<tr>
+				<td>匯入個人會員Excel資料結果頁</td>
+				<td><a href="QP61.html" target="_blank">QP61.html</a></td>
+			</tr>
+			<tr>
+				<td>團體會員屆次頁</td>
+				<td>同 QP54</td>
+			</tr>
+			<tr>
+				<td>團體會員屆次查詢結果頁</td>
+				<td>同 QP53</td>
+			</tr>
+			<tr>
+				<td>該屆次團體會員列表頁</td>
+				<td><a href="QP62.html" target="_blank">QP62.html</a></td>
+			</tr>
+			<tr>
+				<td>檢視團體會員資料</td>
+				<td><a href="QP63.html" target="_blank">QP63.html</a></td>
+			</tr>
+			<tr>
+				<td>更新團體會員資料</td>
+				<td><a href="QP64.html" target="_blank">QP64.html</a></td>
+			</tr>
+			<tr>
+				<td>新增團體會員資料</td>
+				<td><a href="QP65.html" target="_blank">QP65.html</a></td>
+			</tr>
+			<tr>
+				<td>刪除團體會員</td>
+				<td>同 QP62 加alert</td>
+			</tr>
+			<tr>
+				<td>匯入團體會員Excel資料</td>
+				<td>同 QP59</td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>前台會務管理_會議記錄</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>歷屆會議紀錄列表</td>
+				<td><a href="QP66.html" target="_blank">QP66.html</a></td>
+			</tr>
+			<tr>
+				<td>新增會議紀錄(理監事聯席會議)</td>
+				<td><a href="QP67.html" target="_blank">QP67.html</a></td>
+			</tr>
+			<tr>
+				<td>新增會議紀錄(會員大會)</td>
+				<td><a href="QP68.html" target="_blank">QP68.html</a></td>
+			</tr>
+			<tr>
+				<td>新增會議紀錄(會員大會)選擇提案</td>
+				<td>QP67、QP68</td>
+			</tr>
+			<tr>
+				<td>新增會議紀錄(會員大會)選擇提案結果頁</td>
+				<td>同 QP68</td>
+			</tr>
+			<tr>
+				<td>編輯會議紀錄</td>
+				<td><a href="QP69.html" target="_blank">QP69.html</a></td>
+			</tr>
+			<tr>
+				<td>檢視會議紀錄/td>
+				<td>同QP 33</td>
+			</tr>
+			<tr>
+				<td>刪除會議紀錄</td>
+				<td>同 QP66 加alert</td>
+			</tr>
+		</table>
+
+		<h3>20181008新增頁面</h3>	
+		<table border="0">
+			<tr>
+				<th>前臺功能(社團會務管理者)</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>(社團會務管理員)優先處理事項</td>
+				<td><a href="QP79.html" target="_blank">QP79.html</a></td>
+			</tr>
+		</table>
+		<h3>20181113新增頁面</h3>	
+		<table border="0">
+			<tr>
+				<td>地址填寫範例</td>
+				<td><a href="QP80.html" target="_blank">QP80</a></td>
+			</tr>
+		</table>
+		<h3>20190125新增頁面</h3>	
+		<table border="0">
+			<tr>
+				<td>線上申辦系統操作教學影片</td>
+				<td><a href="QP81.html" target="_blank">QP81</a></td>
+			</tr>
+		</table>
+
+
+		<h2>03/前臺功能(後台審核)</h2>
+		<table border="0">
+			<tr>
+				<th>統計報表查詢結果頁</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>後台登入頁</td>
+				<td><a href="login-05.html" target="_blank">login-05</a></td>
+			</tr>
+			<tr>
+				<td>社團登記初審-待辦案件列表</td>
+				<td><a href="LP1.html" target="_blank">LP1</a></td>
+			</tr>
+			<tr>
+				<td>社團登記初審-二審審查中案件列表</td>
+				<td>同 LP1</td>
+			</tr>
+			<tr>
+				<td>社團登記初審-已結案案件列表</td>
+				<td><a href="LP2.html" target="_blank">LP2</a></td>
+			</tr>
+			<tr>
+				<td>社團登記初審-案件審核頁4-1</td>
+				<td><a href="LP3.html" target="_blank">LP3</a></td>
+			</tr>
+			<tr>
+				<td>社團登記初審-案件審核頁4-2</td>
+				<td><a href="LP4.html" target="_blank">LP4</a></td>
+			</tr>
+			<tr>
+				<td>社團登記複審-待辦案件列表</td>
+				<td>同 LP1</td>
+			</tr>
+			<tr>
+				<td>社團登記複審-案件審核頁</td>
+				<td><a href="LP5.html" target="_blank">LP5</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>後台社團成立登記申請案件進度查詢</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>(社團成立登記申請)案件進度查詢頁</td>
+				<td><a href="LP7.html" target="_blank">LP7.html</a></td>
+			</tr>
+			<tr>
+				<td>(社團成立登記申請)案件進度查詢結果頁</td>
+				<td><a href="LP8.html" target="_blank">LP8.html</a></td>
+			</tr>
+		</table>
+		<table border="0">
+			<tr>
+				<th>後台統計報表功能</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>統計報表查詢頁</td>
+				<td><a href="LP15.html" target="_blank">LP15.html</a></td>
+			</tr>
+			<tr> 
+				<td style="padding-left: 60px;">統計報表查詢頁(查詢地方性社會團體)</td>
+				<td><a href="LP16.html" target="_blank">LP16.html</a></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

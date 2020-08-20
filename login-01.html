@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>社會團體成立登記線上申辦系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/hyui.css">
+</head>
+<body>
+    <!-- wrapper 最大寬度 -->
+    <div id="mp" class="wrapper">
+        <!-- main Start -->
+        <div id="center" class="">
+            <!-- 格線設定請看 page/_template.scss -->
+            <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+            <section class="section logo">
+                <div class="container">
+                    <h1><img src="images/logo-2.png" alt=""></h1>
+                </div>
+            </section>
+            <section class="section login">
+                <div class="container">
+                    <div class="setting">
+                        <h3>線上登記新成立的社會團體</h3>
+                        <div class="col Left">
+                            <form action="" class="form_grid">
+                                <div class="radio_grp">
+                                    <label><input name="radioSample" type="radio" value="" checked=""><span>申請人登記社會團體登入(自然人憑證)</span></label>
+                                    <label><input name="radioSample" type="radio" value=""><span>申請人登記社會團體登入(帳號及密碼)</span></label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col Right">
+                            <form action="" class="form_grid form_inline">
+                                <div class="form_grp">
+                                    <label for="username">身分證字號：</label>
+                                    <input name="username" type="text" placeholder="請輸入文字">
+                                </div>
+                                <div class="form_grp">
+                                    <label for="username">憑證PIN CODE：</label>
+                                    <input name="username" type="password" placeholder="請輸入文字">
+                                </div>
+                                <div class="form_grp">
+                                    <label class="form_title">驗證碼：</label>
+                                    <div class="form_content">
+                                        <input type="text" id="" value="">
+                                        <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                    </div>
+                                </div>
+                                <a href="" class="reload">重新產生驗證碼</a>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="btn_grp">
+                        <a href="" class="btn btn-orange">登入</a>
+                        <a href="" class="btn btn-blue ">註冊帳號（首次登入使用）</a>
+                        <a href="" class="btn btn-yellow">清除</a>
+                    </div>
+                    <div class="message">
+                        <h3>重要說明：</h3>
+                        <ol>
+                            <li>第一次使用本網站前，請安裝<a href="">HiPKI憑證驗證元件</a>以及<a href="">HiCOS卡片管理工具</a>，才能使用憑證登入。安裝完成後可點選<a href="">環境檢查</a>。</li>
+                            <li>第一次使用本網站登記社會團體，請將自然人憑證插入卡式憑證讀卡機後，輸入「身分證字號」、「憑證PIN CODE」及「驗證碼」後，點選「註冊帳號(首次登記使用)」按鈕進行註冊取得操作系統之帳號 ; 若已完成註冊帳號之使用者，則請輸入「身分證字號」、「憑證PIN CODE」及「驗證碼」後，點選「登入」按鈕進行登入作業，使得登記成立社會團體。</li>
+                            <li>已完成社會團體成立登記並已取得系統核發之社會團體所屬專用的資料維護管理帳號/密碼，若需登入本系統進行社會團體登記資料維護（包含資料異動、相關文件備查上傳、解散申請......)，則請選擇「社會團體資料維護管理登入(帳號及密碼)」，輸入「社會團體帳號」、「密碼」及「驗證碼」後，點選「登入」按鈕進行登入作業，使得維護該社會團體相關資料及後續備查及申請相關作業。</li>
+                            <li>有關自然人憑證相關問題(如忘記PIN CODE、鎖卡解碼)，請洽<a href="">MOICA內政部憑證管理中心</a>。</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- 活動訊息 可用有意義名稱命名 
+            <section class="section event">
+                <div class="container">
+                    <div class="col news">News區塊</div>
+                    <div class="col video">Video區塊</div>
+                </div>
+            </section>-->
+            <!-- 活動訊息 可用有意義名稱命名 
+            <section class="section event">
+                <div class="container">
+                    <h2>左右有gutter</h2>
+                    <div class="col news">News區塊</div>
+                    <div class="col video">Video區塊</div>
+                </div>
+            </section>-->
+        </div>
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                <div class="footer_info">
+                    <p class="Copyright">內政部合作及人民團體司籌備處 版權所有©</p>
+                    <p>電腦操作/系統維修諮詢專線：02-23456789，服務時間為週一至週五08:30-19:00。</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- slick js -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

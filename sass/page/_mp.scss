@@ -1,0 +1,505 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+#mp{
+    background: url('../images/basic/mp-bg.jpg') left top repeat-x;
+    .logo{
+        .container{
+            @include gutter();
+            background: url('../images/basic/mp-bg-rightside.png') right 8px no-repeat;
+        }
+        h1{
+            margin-top: 50px;
+            margin-bottom: 10px;
+            @include screen('xs_mobile') {
+                img{
+                    width: 100%;
+                    
+                }
+            }
+        }
+    }
+    
+}
+
+// 首頁區塊設定
+.section {
+    // padding: 0em 0 3em;
+    // text-align: center;
+    [class^="col"] {
+        // border: 2px solid #FFF;
+        // background: #DEDEDE;
+        // min-height: 250px;
+        // color: $primaryColor;
+        // text-align: center;
+        // line-height: 250px;
+        // font-size: 1.5em;
+        // font-weight: bold;
+        // @include box-sizing();
+    }
+    &+.section {
+        // padding-top: 2em;
+    }
+}
+
+.login{
+    background: url(../images/basic/mp-keyvisual.svg) 50% top no-repeat;
+    .container{
+        padding-top: 280px;
+        >div{ @include clearfix; }
+    }
+    input[type="radio"]:checked {
+        border-color: #222;
+        background-color: #222;
+    }
+    input[type="radio"]:checked {
+        box-shadow: #fff 0 0 0 3px inset, #222 0 0 0 1px;
+    }
+
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(12); //768px  width:50%
+        @include make-md-column(4); //992px  width:50%
+        @include make-lg-column(4); //1400px width:50%
+        @include gutter();
+        &:first-child {
+            @include make-xs-column-offset(0);
+            @include make-sm-column-offset(0);
+            @include make-md-column-offset(2);
+            @include make-lg-column-offset(2);
+        }
+    }
+    .Type{
+        .col {
+            @include make-xs-column(12);
+            @include make-sm-column(12); //768px  width:50%
+            @include make-md-column(4); //992px  width:50%
+            @include make-lg-column(4); //1400px width:50%
+            @include gutter();
+            &:first-child {
+                @include make-xs-column-offset(0);
+                @include make-sm-column-offset(0);
+                @include make-md-column-offset(2);
+                @include make-lg-column-offset(2);
+            }
+            &:nth-child(3) {
+                @include make-xs-column(12);
+                @include make-sm-column(12);
+                @include make-md-column(8);
+                @include make-lg-column(8);
+                @include make-xs-column-offset(0);
+                @include make-sm-column-offset(0);
+                @include make-md-column-offset(2);
+                @include make-lg-column-offset(2);
+                a{
+                    @include border-radius(60px);
+                    padding: .5em 1.2em;
+                    background-color: #21447e;
+                    text-align: center;
+                    background-size: 0;
+
+                    &:before{
+                        margin-right: 1em;
+                        background: #fff;
+                        color: #21447e;
+                        padding: 10px;
+                        @include border-radius(50%);
+                        transition: color .8s ease;
+
+                    }
+                    &:hover, &:focus{
+                        background-color: #F77810;
+                        background-position: 10% 50%;
+                        background-size: 0;
+                        background-repeat: no-repeat;
+                        &:before{
+                            color: #F77810;
+                        }
+                    }
+                }
+            }
+        }
+        a{
+            display: block;
+
+            background-color: rgb(35,184,133); // Old browsers
+            @include filter-gradient(#23b885, #23b8b2, vertical); // IE6-9
+            @include background-image(linear-gradient(top, rgba(35,184,133,1) 0%,rgba(35,184,178,1) 100%));
+
+            background-position: 10% 50%;
+            background-size: 80px 80px;
+            background-repeat: no-repeat;
+            // &:nth-child(1) .Type a{ background-image: url(../images/basic/mp-icon-01.png);}
+            // &:nth-child(2) .Type a{ background-image: url(../images/basic/mp-icon-02.png);}
+
+            transition: background-color .8s ease;
+
+            &:hover, &:focus{
+                background-color: #F77810;
+                background-position: 10% 50%;
+                background-size: 80px 80px;
+                background-repeat: no-repeat;
+            }
+
+            border: 4px solid #FFF;
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+            line-height: 1.4;
+            padding: 2em 1.2em 2em 5.6em;
+            margin-bottom: 1em;
+            box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.36);
+            @include box-sizing();
+
+            @media screen and (max-width: 990px) {
+                padding: 2em 1.2em 2em 8em;
+            }
+            @media screen and (max-width: 672px) {
+                padding: 2em 1.2em 2em 6.2em;
+            }
+            @include screen('xs_mobile') {
+                padding: 2em 1.2em 2em 5.6em;
+            }
+        }
+        .col:nth-child(1) a{ background-image: url(../images/basic/mp-icon-01.png);}
+        .col:nth-child(2) a{ background-image: url(../images/basic/mp-icon-02.png);}
+        // .col:nth-child(3) a{ background-image: url(../images/basic/mp-icon-02.png);}
+    }
+    
+    
+    // 新成立
+    .setting{
+        background: #fff;
+        width: 740px;
+        margin: 0 auto;
+        border: solid 6px #fff;
+        box-shadow: 0px 0px 17px -2px rgba(102,102,102,1);
+        background-color: rgb(35,184,133); // Old browsers
+        @include filter-gradient(#23b885, #23b8b2, vertical); // IE6-9
+        @include background-image(linear-gradient(top, rgba(35,184,133,1) 0%,rgba(35,184,178,1) 100%));
+        h3{
+            text-align: center;
+            color: #23b88f;
+            font-size: 1.725em;
+            background: #fff;
+            margin: 0 0 1em;
+            line-height: 2;
+            padding: .45em 0;
+        }
+        .col {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            label{
+                color: #fff;
+                span{
+                    display: inline-block;
+                    width: 90%;
+                    vertical-align: text-top;
+                }
+            }
+            form.form_inline{
+                .form_grp{
+                    width: 100%;
+                    border-bottom: none;
+                    margin: 0;
+                    padding: 0;
+                    label{
+                        width: 125px;
+                        text-align: right;
+                    }
+                    input[type="text"],input[type="password"]{
+                        width: 65%;
+                    }
+                    .form_title{
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    .form_content{
+                        width: 66%;
+                        padding-left: 5px;
+                        padding-right: 0;
+                        input[type="text"]{
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+            a.reload{
+                display: inline-block;
+                float: right;
+                color: #fff;
+                line-height: 2;
+                margin-right: 20px;
+                padding: .25em .5em;
+                border: solid 1px transparent;
+                &:hover, &:focus{
+                    border: solid 1px #fff;
+                }
+            }
+        }
+        .col.Left{
+            @include make-xs-column(12);
+            @include make-sm-column(12); //768px  width:50%
+            @include make-md-column(4);  //992px  width:50%
+            @include make-lg-column(4);  //1400px width:50%;
+            border-right: dotted 2px #fff;
+        }
+        .col.Right{
+            @include make-xs-column(12);
+            @include make-sm-column(12); //768px  width:50%
+            @include make-md-column(8);  //992px  width:50%
+            @include make-lg-column(8);  //1400px width:50%
+        }
+        .col.single{
+            @include make-xs-column(12);
+            @include make-sm-column(12);
+            @include make-md-column(12);
+            @include make-lg-column(12);
+        }
+        @include screen('tablet') {
+            width: 90%;
+            .col.Left{
+                border-right: none;
+            }
+        }
+        @include screen('mobile') {
+            .col {
+                form.form_inline{
+                    .form_grp{
+                        label{
+                            width: 100%;
+                            text-align: left;
+                        }
+                        input[type="text"],input[type="password"]{
+                            width: 100%;
+                        }
+                        .form_content{
+                            width: 100%;
+                            input[type="text"]{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                a.reload{
+                    margin-right: 0;
+                    float: none;
+                }
+            }
+        }
+    }
+    // 已成立
+    .setted{
+    }
+
+    .btn_grp{
+        padding: 1em;
+        .btn{
+            // width: 760px;
+            font-size: 1.2em;
+            @media screen and (max-width: 760px){
+                width: 100%;
+            }
+        }
+    }
+}
+.message{
+    padding: 1em 2em;
+    a{ margin: 0 6px;}
+    ol, ul{
+        li{ margin-bottom: 1em; }
+    }
+}
+.Mayor{
+    padding: 1em;
+    text-align: center;
+    font-size: 1.125em;
+}
+
+.rule{
+    h3{
+        color: $lightColor;
+    }
+    section{
+        margin-bottom: 1em;
+        border-bottom: dotted 2px #bbb;
+    }
+    .container{
+        margin-bottom: 1.25em;
+    }
+    .ordinal{
+        @include make-xs-column(12);
+        @include make-sm-column(1);
+        @include make-md-column(1);
+        @include make-lg-column(1);
+        @include box-sizing();
+        @include gutter(0);
+        font-weight: bold;
+    }
+    .content{
+        @include make-xs-column(12);
+        @include make-sm-column(11);
+        @include make-md-column(11);
+        @include make-lg-column(11);
+        @include box-sizing();
+        @include gutter(0);
+    }
+}
+
+.uploaded, .reply, .feedback{
+    border: solid 1px #ddd;
+    margin: .75em 0;
+    padding: 1em 2em;
+    @include border-radius(5px);
+    .title{ color: $secondaryColor; }
+}
+.range{
+    border: solid 1px #ddd;
+    margin: .75em 0;
+    padding: .5em 2em;
+    @include border-radius(5px);
+    .title{ color: $secondaryColor; }
+    label{ margin: 0 0 0 0 !important;}
+    .btn_grp { width: auto !important;}
+}
+.seal{
+    text-align: center;
+    
+    img{
+        height: 300px;
+    }
+}
+
+
+// 可用class個別命名
+.event {
+    .news {
+        @include make-xs-column(12);
+        @include make-sm-column(8);
+        @include make-md-column(8); //992px  width:100%
+        @include make-lg-column(8); //1400px width:100%
+        // @include gutter(); //gutter 代表左右要留白 
+    }
+    .video {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4); //992px  width:100%
+        @include make-lg-column(4); //1400px width:100%
+        // @include gutter(); //gutter 代表左右要留白
+    }
+    &+.event {
+        .container {
+            @include gutter(); //gutter 代表左右要留白
+        }
+    }
+}
+// 單欄
+.col-12 {
+    .container {
+        max-width: 100%;
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(12); //992px  width:100%
+        @include make-lg-column(12); //1400px width:100%
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+// 四欄
+.col-3 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(3); //768px  width:50%
+        @include make-md-column(3); //992px  width:50%
+        @include make-lg-column(3); //1400px width:50%
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+// 三欄
+.news {
+    .container {
+        @include gutter(); //gutter 代表左右要留白
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(4);
+        @include make-md-column(4); //992px  width:100%
+        @include make-lg-column(4); //1400px width:100%
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+// 雙欄 6-6
+.col-6 {
+    .container {
+        @include gutter(); //gutter 代表左右要留白
+    }
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(6); //768px  width:50%
+        @include make-md-column(6); //992px  width:50%
+        @include make-lg-column(6); //1400px width:50%
+    }
+}
+// 雙欄 8-4
+.col-8-4 {
+    .news {
+        @include make-xs-column(12);
+        @include make-sm-column(8); //768px  width:66.6%
+        @include make-md-column(8); //992px  width:66.6%
+        @include make-lg-column(8); //1400px width:66.6%
+        @include gutter(); //gutter 代表左右要留白
+    }
+    .video {
+        @include make-xs-column(12);
+        @include make-sm-column(4); //768px  width:33.3%
+        @include make-md-column(4); //992px  width:33.3%
+        @include make-lg-column(4); //1400px width:33.3%
+    }
+}
+// 三欄 3-3
+.col-3-3-3 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(4); //768px  width:33.3%
+        @include make-md-column(4); //992px  width:33.3%
+        @include make-lg-column(4); //1400px width:33.3%
+    }
+    .imgOuter {
+        @include aspect-ratio(4, 3);
+    }
+    &+.col-3-3-3 {
+        background: $primaryColor;
+    }
+}
+// 進階設定，也可以自己寫
+.col-1-2-1 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(3);
+        @include make-md-column(3);
+        @include make-lg-column(3);
+        @include gutter(); //gutter 代表左右要留白
+        min-height: 250px;
+        &:nth-child(2) {
+            @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(6);
+            @include make-lg-column(6);
+        }
+    }
+}
+
+// 五欄
+.col-5 {
+    .col {
+        @include make-xs-column(12);
+        @include make-sm-column(2);
+        @include make-md-column(2);
+        @include make-lg-column(2);
+        &:first-child {
+            @include make-xs-column-offset(0);
+            @include make-sm-column-offset(1);
+            @include make-md-column-offset(1);
+            @include make-lg-column-offset(1);
+        }
+    }
+}

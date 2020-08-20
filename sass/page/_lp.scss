@@ -1,0 +1,177 @@
+.lp {
+    table {
+        td {
+            text-align: left;
+            &.date {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+            &.num {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .list {
+        ul,
+        ol {
+            list-style-type: none;
+            padding: 0;
+            border-top: 2px solid $primaryColor;
+            li {
+                padding: 1em 0;
+                border-bottom: 1px solid #DDD;
+                position: relative; // outline: 1px solid blue;
+                a {
+                    display: block;
+                    padding-left: 2em;
+                    position: relative;
+                    line-height: 1.45em;
+                    .num {
+                        width: 1.5em;
+                        text-align: right;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        &:after {
+                            content: ".";
+                            display: inline-block;
+                        }
+                    }
+                }
+                span.dept {
+                    display: inline-block;
+                    font-size: .938em;
+                    @include screen("mobile") {
+                        display: block;
+                    }
+                }
+                time {
+                    display: block;
+                    color: #AAA;
+                    font-size: .938em;
+                }
+            }
+        }
+    }
+    .album {
+        margin: 1em auto;
+        overflow: hidden;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                @include make-xs-column(12);
+                @include make-sm-column(4);
+                @include make-md-column(4);
+                @include make-lg-column(4);
+                @include gutter();
+                a {
+                    display: block;
+                    text-align: center;
+                }
+                .imgOuter {
+                    width: 100%;
+                    @include aspect-ratio(4, 3);
+                }
+            }
+        }
+    }
+}
+
+
+// 滿版
+.Full{
+    max-width: 98%!important;
+    padding-bottom: 2em;  
+}
+
+// 兩欄中間的分隔線
+.Separation{
+    background: url(../images/bg_SeparationLine.png) 50% 50% no-repeat;
+    &:before, &:after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+    @include screen('tablet') {
+        background: none;
+    }
+}
+
+// 左右欄
+.Left, .Right{
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 2em;
+    max-height: 600px;
+    overflow-y: scroll;
+    text-align: left;
+    @include screen('tablet') {
+        width: 100%;
+        float: none;
+    }
+}
+.Left table, .Right table{ text-align: center; }
+
+.styleTb2:before,
+.styleTb2:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.Left{ /*box-shadow: inset -7px 0 1px -7px rgba(0,0,0,0.4);*/ }
+
+.alignL{ text-align: left !important; }
+
+// 連結
+.Links{
+    text-align: left;
+    margin: 1em auto 1em;
+    box-sizing: border-box;
+}
+.Links:before,
+.Links:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.Links ul {
+    padding: 0;
+    margin: 0;
+}
+.Links ul li{
+    display: block;
+    float: left;
+    border-right: dotted 2px #a7a7a7;
+}
+.Links ul li:last-child{ border-right: dotted 2px transparent;  }
+
+.Links a {
+    font-size: 1em;
+    padding: .25em 1em;
+}
+.Links a:hover,
+.Links a:focus{
+    color: #fff;
+    background: #1a557d;
+}
+
+
+.Separation .Short{ width: 80px !important;} 
+.Separation .Middle{ width: 130px !important;}
+.Separation .Large{ width: 80% !important;}
+
+.Short{ width: 30% !important;} 
+.Middle{ width: 40% !important;}
+.Large{ width: 100% !important;}

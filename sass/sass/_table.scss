@@ -1,0 +1,174 @@
+//http://lab.25sprout.com/responsive_table/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    @include screen('xs_mobile') {
+        width: 100%;
+        position: relative;
+    }
+    th,
+    td {
+        padding: .5em;
+        text-align: left;
+        .btn_grp{ padding: .25em 0; }
+        ol, ul{
+            li{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    td {
+        border: #ddd 1px solid;
+        word-break: break-all;
+        a {
+            word-break: break-all;
+        }
+    }
+    th {
+        background-color: #F3F3F3;
+        color: #333;
+        border: #DDD 1px solid;
+        text-align: center;
+        // min-width: 60px;
+        width: 220px;
+        @include screen('xs_mobile') {
+            width: 100%;
+        }
+    }
+    &.table_hover {
+        tr:hover {
+            background: #F3F3F3;
+        }
+    }
+    &.table_sprite {
+        tr:nth-child(even) {
+            background: #F5F5F5;
+        }
+    }
+}
+
+.table_list {
+    @include screen('xs_mobile') {
+        background-color: transparent !important; //Force table to not be like tables anymore
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr {
+            border: 1px solid #ccc;
+            margin-bottom: 10px; // background-color: #333;
+        }
+        td {
+            // Behave  like a "row"
+            border: none !important;
+            border-bottom: 1px solid #eee !important;
+            position: relative;
+            padding-left: 35% !important;
+            white-space: normal;
+            text-align: left;
+            &:before {
+                content: attr(data-title);
+                position: absolute;
+                top: .5em;
+                left: .5em;
+                width: 30%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                color: #000;
+            }
+        }
+    }
+}
+
+.table_wrapper {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    @include screen('notebook') {
+        width:100%;
+        display:block;
+        @include clearfix;
+        overflow:hidden;
+        overflow-x:auto;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transform: translate3d(0, 0, 0);
+        table{
+            width:100%;
+            min-width:545px;
+            th{ min-width: 120px; }
+            td{ white-space: nowrap; }
+        }
+
+    }
+}
+
+.Horizontal{
+    table {
+        th {
+            border: solid 1px transparent;
+            border-top: solid 3px $primaryColor;
+            border-bottom: solid 1px $primaryColor;
+            text-align: center;
+            width: auto;
+            min-width: 60px;
+            color: $primaryColor;
+        }
+        td {
+            border: solid 1px transparent;
+            border-top: solid 1px #DDD;
+            border-bottom: solid 1px #DDD;
+        }
+    }
+}
+
+.center{
+    th,
+    td {
+        text-align: center;
+    }
+}
+
+// RWD table
+.table_wrapper {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    width:100%;
+    display:block;
+    /*@include clearfix;*/
+    overflow:hidden;
+    overflow-x:auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate3d(0, 0, 0);
+}
+.table_wrapper table{
+    width:100%;
+    min-width:545px;
+}
+/*.table_wrapper table th{ min-width: 120px; }*/
+.table_wrapper table td{ white-space: nowrap; }
+
+th{
+    background-color:#e7e6e4;
+    border: 1px dotted #5a5856;
+    color: #5a5856;
+}
+
+/*PDF*/
+.PDF{
+    width: 100%;
+    /*background: #f1f1f1;*/
+    overflow-y: scroll;
+}
+
+
+
